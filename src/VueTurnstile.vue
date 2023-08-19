@@ -18,6 +18,7 @@ declare global {
 
 declare interface VueTurnstileData {
   resetTimeout?: ReturnType<typeof setTimeout>;
+  turnstileWidgetId?: string;
 }
 
 let turnstileState = window.turnstile !== undefined ? 'ready' : 'unloaded';
@@ -60,11 +61,17 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    removeBeforeUnMount: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
   },
 
   data(): VueTurnstileData {
     return {
       resetTimeout: undefined,
+      turnstileWidgetId: undefined,
     };
   },
 
@@ -93,7 +100,11 @@ export default defineComponent({
     },
 
     render() {
-      window.turnstile.render(this.$refs.turnstile, this.turnstileOptions);
+      this.turnstileWidgetId = window.turnstile.render(this.$refs.turnstile, this.turnstileOptions);
+    },
+
+    remove() {
+      window.turnstile && this.turnstileWidgetId && window.turnstile.remove(this.turnstileWidgetId);
     },
 
     startResetTimeout() {
@@ -134,6 +145,10 @@ export default defineComponent({
     if (this.renderOnMount) {
       this.render();
     }
+  },
+
+  async beforeUnmount() {
+    this.removeBeforeUnMount && this.remove();
   },
 });
 </script>
