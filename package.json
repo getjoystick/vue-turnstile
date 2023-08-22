@@ -1,6 +1,6 @@
 {
-  "name": "vue-turnstile",
-  "version": "1.0.0",
+  "name": "@getjoystick/vue-turnstile",
+  "version": "1.0.0-alpha.1",
   "description": "Vue library for Cloudflare Turnstile CAPTCHA alternative",
   "type": "module",
   "files": [
@@ -20,16 +20,12 @@
     "build": "vite build && vue-tsc --emitDeclarationOnly",
     "preview": "vite preview"
   },
-  "homepage": "https://github.com/ruigomeseu/vue-turnstile",
-  "author": {
-    "name": "Rui Gomes",
-    "email": "hello@ruigomes.me",
-    "url": "https://ruigomes.me"
-  },
+  "homepage": "https://github.com/getjoystick/vue-turnstile",
+  "author": "getjoystick",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ruigomeseu/vue-turnstile"
+    "url": "https://github.com/getjoystick/vue-turnstile"
   },
   "keywords": [
     "cloudflare",
@@ -42,6 +38,7 @@
   "dependencies": {
     "vue": "^3.2.45"
   },
+
   "devDependencies": {
     "@testing-library/cypress": "^9.0.0",
     "@types/node": "^18.11.18",
