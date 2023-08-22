@@ -1,6 +1,6 @@
 # vue-turnstile
 
-[![npm version](https://badge.fury.io/js/vue-turnstile.svg)](https://www.npmjs.com/package/vue-turnstile)
+[![Latest Stable Version](https://img.shields.io/npm/v/@getjoystick/vue-turnstile)](https://www.npmjs.com/package/@getjoystick/vue-turnstile)
 
 A [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/) library for Vue 3
 
@@ -66,9 +66,14 @@ export default {
 
 ## Author
 
+Original author of the library is:
 Rui Gomes  
 https://ruigomes.me
 
+Fork is maintained and published by:
+Joystick
+https://getjoystick.com
+
 ## License
 
-The MIT License (MIT). Please see [LICENSE file](https://github.com/ruigomeseu/vue-turnstile/blob/main/LICENSE.md) for more information.
+The MIT License (MIT). Please see [LICENSE file](https://github.com/getjoystick/vue-turnstile/blob/main/LICENSE.md) for more information.
